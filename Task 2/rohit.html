@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohit's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                <h2 class="style">Rohit's Portfolio</h2>
+            </div>
+            <div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#2">About Me</a></li>
+                    <li><a href="#3">Skills</a></li>
+                    <li><a href="#4">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="firstsection">
+            <div class="leftsection">
+                <img src="3.jpg ">
+            </div>
+            <div class="rightsection">
+                <section id="1"></section>
+                Hi, My Name is Rohit
+                <div>I Am a</div>
+                <span id="element"></span>
+                <div>
+                    <button class="btn">Download C.V</button>
+                </div>
+            </div>
+
+        </div>
+        <hr>
+        <div class="secondsection lorem">
+            <div class="tsection lorem">
+                <section id="2">
+                    <h1>About me</h1>
+                    I am a ethusiastic web developer hunger for more to develop.
+                    <div>
+                        And on the other hand I also have skills in the Above Programming languages and fields C++, Python , A.I.
+                        A passionate and dedicated beginner web developer with a focus on
+                        frontend development. My journey in web development began after completing my 12th, and
+                        I've since been honing my skills and expanding my knowledge in this exciting field.
+                        I enjoy creating visually appealing, user-friendly websites and applications using technologies
+                        like
+                        HTML, CSS, and JavaScript.
+                    </div>
+            </div>
+            </section>
+            <div class="jsection">
+                <img src="4.jpg" alt="">
+                <div class="icon">
+                    <a href='https://www.linkedin.com/in/rohit-paswan-2a66462b7/' target="_blank">
+                        <img src="linkedin-icon.png" alt="LinkedIn">
+                    </a>
+                    <a href=https://www.instagram.com/rohit_p_456/ target="_blank">
+                        <img src="instagram-icon.png" alt="Instagram">
+                    </a>
+                    <a href=https://github.com/rohiterror58 target="_blank">
+                        <img src="github.png" alt="Github">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="thirdsection">
+            <div class="rsection skills">
+                <section class="skills" id="3">
+                    <h3 class="skills-header">My Skills</h3>
+                    <div class="skills-container">
+                        <div class="skill-container">
+                            <p>HTML</p>
+                            <div class="percentage html-percentage">88%</div>
+                            <div class="bar">
+                                <span class="html"></span>
+                            </div>
+                        </div>
+
+                        <div class="skill-container">
+                            <p>CSS</p>
+                            <div class="percentage css-percentage">79%</div>
+                            <div class="bar">
+                                <span class="css"></span>
+                            </div>
+                        </div>
+
+                        <div class="skill-container">
+                            <p>JavaScript</p>
+                            <div class="percentage javascript-percentage">50%</div>
+                            <div class="bar">
+                                <span class="javascript"></span>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="lsection">
+                <div><img class="image" src="web.jpg" alt=""></div>
+            </div>
+        </div>
+        <div class="jk">
+            <img src="html.png" alt="">
+            <img src="css.png" alt="">
+            <img src="js.png" alt="">
+        </div>
+        </div>
+        <hr>
+        <div class="fourthsection">
+        </div>
+        <section id="4">
+            <div class="contact">
+                <h2><a href="tel:+91 95845 63245">Contact Me</a></h2>
+                <h2><a href="mailto:prometheus456@gmail.com">Mail me</a></h2>
+            </div>
+        </section>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer.', 'Frontend Developer.'],
+            typeSpeed: 50,
+        });
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                spans.forEach((span, index) => {
+                    const percentage = percentages[index];
+                    if (entry.isIntersecting) {
+                        span.classList.add('animate');
+                        percentage.classList.add('animate');
+                    } else {
+                        span.classList.remove('animate');
+                        percentage.classList.remove('animate');
+                    }
+                });
+            });
+        });
+
+        const skillContainer = document.querySelector('.skills-container');
+        const spans = document.querySelectorAll('.bar span');
+        const percentages = document.querySelectorAll('.percentage');
+        observer.observe(skillContainer);
+
+        function updatePercentagePositions() {
+            const barWidth = document.querySelector('.bar').clientWidth;
+            percentages.forEach(percentage => {
+                const widthPercentage = parseFloat(percentage.textContent) / 100;
+                percentage.style.left = `${barWidth * widthPercentage - 12.5}px`;
+            });
+        }
+
+        updatePercentagePositions(); // Call initially
+    </script>
+
+    <footer>
+        <div class="social">
+            <a href=https://www.linkedin.com/in/rohit-paswan-2a66462b7/ target="_blank">
+                <img src="linkedin-icon.png" alt="LinkedIn">
+            </a>
+            <a href=https://www.instagram.com/rohit_p_456/ target="_blank">
+                <img src="instagram-icon.png" alt="Instagram">
+            </a>
+        </div>
+    </footer>
+</body>
+
+</html>
