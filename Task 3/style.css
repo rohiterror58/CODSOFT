@@ -1,0 +1,63 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+.container{
+    position:fixed;
+    background-image: url(dbz.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: lavenderblush;
+
+}
+
+.container form input{
+    border:0px;
+    outline:0px;
+    width:60px;
+    height:60px;
+    background: #484848;;
+    color:#fff;
+    border-radius:60px;
+    cursor:pointer;
+    margin:10px;
+    font-size:30px;
+}
+
+.calucator{
+    background: #000000de;
+    padding: 60px;
+    border-radius: 20px;
+}
+
+form .display{
+    display:flex;
+    justify-content:center;
+    margin:20px 0px;
+    border-radius:0px;
+}
+
+form .display input{
+    text-align:center;
+    flex:1;
+    font-size:45px;
+}
+
+form input.equal{
+    width:130px;
+}
+
+form input.op{
+    color:rgb(74, 240, 74);
+}
+
+form input.re{
+    background-color: rgb(74, 240, 74);
+}
